@@ -46,13 +46,6 @@ set cursorcolumn
 " +------------------------------------------------------------------------+
 " | Key maps         					                   |
 " +------------------------------------------------------------------------+
-
-let $VIMCONFIG = fnamemodify(expand("$VIM"), ':h:h') . '\config'  " Get the path equivalent to $VIM\..\..\config
-let &rtp .= ',' . $VIMCONFIG              " Add custom runtime path
-let $MYVIMRC = $VIMCONFIG . '\init.vim'         " Set $MYVIMRC to point to the init.vim file
-let $MYGVIMRC = $VIMCONFIG . '\ginit.vim'       " Set $MYGVIMRC to point to the ginit.vim file
-exec 'source ' . $MYVIMRC           | " Source the init.vim file
-
 let mapleader = "\<space>"
 nnoremap <silent> <Leader><Leader> :source $MYVIMRC<cr>
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
