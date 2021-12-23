@@ -1,5 +1,5 @@
 " +------------------------------------------------------------------------+ 
-" |          __ __ _ _  _____  _   __   __  _  _   _  _ __ __ 			       | 
+" |          __ __ _ _  _____  _   __   __  _  _   _  _ __ __ 	           | 
 " |         |  V  | | |/ / __|`.\/' _/ |  \| || \ / || |  V  |             |
 " |         | \_/ | |   <| _|    `._`. | | ' |`\ V /'| | \_/ |             |
 " |         |_| |_|_|_|\_\___|   |___/ |_|\__|  \_/  |_|_| |_|             |
@@ -10,7 +10,7 @@
 " +------------------------------------------------------------------------+
 
 " +------------------------------------------------------------------------+
-" | General Settings   													                           |
+" | General Settings   					                   |
 " +------------------------------------------------------------------------+
 set expandtab " Convert tabs into spaces.
 set shiftwidth=4
@@ -40,9 +40,11 @@ set backup
 set backupdir=~/.local/share/nvim/backup//
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
+set cursorline
+set cursorcolumn
 
 " +------------------------------------------------------------------------+
-" | Key maps         													                             |
+" | Key maps         					                   |
 " +------------------------------------------------------------------------+
 
 let $VIMCONFIG = fnamemodify(expand("$VIM"), ':h:h') . '\config'  " Get the path equivalent to $VIM\..\..\config
@@ -57,7 +59,7 @@ nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 
 " +------------------------------------------------------------------------+
-" | Plugins 															                                 |
+" | Plugins 						                   |
 " +------------------------------------------------------------------------+
 " Automatically install vim-plug.
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
